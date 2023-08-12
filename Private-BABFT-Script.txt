@@ -27,68 +27,6 @@ local client = players.LocalPlayer
 
 _G.Busy = false
 
--- Toggles
-
-GFarm:AddToggle({
-	Name = "Start Gold Farm/Stop Gold Farm",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-		_G.Busy = Value
-    StartGFarm()
-	end    
-})
-
-GCarm:AddToggle({
-	Name = "Auto buy Common chest",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-		getgenv().CChest2 = Value
-    CChest2()
-	end   
-})
-
-GCarm:AddToggle({
-	Name = "Auto buy Uncommon chest",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-		getgenv().UChest2 = Value
-    UChest2()
-	end   
-})
-
-GCarm:AddToggle({
-	Name = "Auto buy Rare chest",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-		getgenv().RChest2 = Value
-    RChest2()
-	end   
-})
-
-GCarm:AddToggle({
-	Name = "Auto buy Epic chest",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-		getgenv().EChest2 = Value
-    EChest2()
-	end   
-})
-
-GCarm:AddToggle({
-	Name = "Auto buy Legendary chest",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-		getgenv().LChest2 = Value
-    LChest2()
-	end   
-})
-
 -- Functions
 
 function StartGFarm()
@@ -273,6 +211,68 @@ GCarm:AddButton({
       		print("button pressed")
       		LChest()
   	end    
+})
+
+-- Tabs
+
+GFarm:AddToggle({
+	Name = "Start Gold Farm/Stop Gold Farm",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+		_G.Busy = Value
+    StartGFarm()
+	end    
+})
+
+GCarm:AddToggle({
+	Name = "Auto buy Common chest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+		getgenv().CChest2 = Value
+    CChest2()
+	end   
+})
+
+GCarm:AddToggle({
+	Name = "Auto buy Uncommon chest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+		getgenv().UChest2 = Value
+    UChest2()
+	end   
+})
+
+GCarm:AddToggle({
+	Name = "Auto buy Rare chest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+		getgenv().RChest2 = Value
+    RChest2()
+	end   
+})
+
+GCarm:AddToggle({
+	Name = "Auto buy Epic chest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+		getgenv().EChest2 = Value
+    EChest2()
+	end   
+})
+
+GCarm:AddToggle({
+	Name = "Auto buy Legendary chest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+		getgenv().LChest2 = Value
+    LChest2()
+	end   
 })
 
 OrionLib:Init()
