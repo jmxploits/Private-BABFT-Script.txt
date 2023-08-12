@@ -227,6 +227,7 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		CChest()
+      		end
   	end    
 })
 
@@ -235,6 +236,7 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		UChest()
+      		end
   	end    
 })
 
@@ -243,6 +245,7 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		RChest()
+      		end
   	end    
 })
 
@@ -251,6 +254,7 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		EChest()
+      		end
   	end    
 })
 
@@ -259,6 +263,6 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		LChest()
+      		end
   	end    
 })
-
