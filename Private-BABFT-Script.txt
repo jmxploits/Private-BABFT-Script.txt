@@ -21,6 +21,7 @@ GFarm:AddToggle({
 	Callback = function(Value)
 		print(Value)
 		_G.Busy = Value
+    StartGFarm()
 	end    
 })
 
@@ -30,6 +31,7 @@ GCarm:AddToggle({
 	Callback = function(Value)
 		print(Value)
 		getgenv().CChest2 = Value
+    CChest2()
 	end   
 })
 
@@ -39,6 +41,7 @@ GCarm:AddToggle({
 	Callback = function(Value)
 		print(Value)
 		getgenv().UChest2 = Value
+    UChest2()
 	end   
 })
 
@@ -48,6 +51,7 @@ GCarm:AddToggle({
 	Callback = function(Value)
 		print(Value)
 		getgenv().RChest2 = Value
+    RChest2()
 	end   
 })
 
@@ -57,6 +61,7 @@ GCarm:AddToggle({
 	Callback = function(Value)
 		print(Value)
 		getgenv().EChest2 = Value
+    EChest2()
 	end   
 })
 
@@ -66,6 +71,7 @@ GCarm:AddToggle({
 	Callback = function(Value)
 		print(Value)
 		getgenv().LChest2 = Value
+    LChest2()
 	end   
 })
 
@@ -126,7 +132,9 @@ while CChest2 == true do
   }
 
   workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
+  task.wait()
   end
+end
 
 function UChest()
 local args = {
@@ -138,13 +146,15 @@ workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
 end
 
 function UChest2()
- while UChest2 == true do
-  local args = {
-    [1] = "Uncommon Chest",
-    [2] = 1
-}
+  while UChest2 == true do
+    local args = {
+      [1] = "Uncommon Chest",
+      [2] = 1
+  }
 
-workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
+  workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
+  task.wait()
+  end
 end
 
 function RChest()
@@ -165,7 +175,9 @@ function RChest2()
   }
 
   workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
+  task.wait()
   end
+end
 
 function EChest()
 local args = {
@@ -184,7 +196,9 @@ function EChest2()
     }
 
   workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
+  task.wait()
   end
+end
 
 function LChest()
 local args = {
@@ -203,7 +217,9 @@ function LChest2()
   }
 
   workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
+  task.wait()
   end
+end
 
 -- Tabs
 
@@ -227,7 +243,6 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		CChest()
-      		end
   	end    
 })
 
@@ -236,7 +251,6 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		UChest()
-      		end
   	end    
 })
 
@@ -245,7 +259,6 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		RChest()
-      		end
   	end    
 })
 
@@ -254,7 +267,6 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		EChest()
-      		end
   	end    
 })
 
@@ -263,6 +275,5 @@ GCarm:AddButton({
 	Callback = function()
       		print("button pressed")
       		LChest()
-      		end
   	end    
 })
