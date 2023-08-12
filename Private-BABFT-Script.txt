@@ -2,6 +2,20 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "Skidded BABFT Script", HidePremium = false, SaveConfig = true, ConfigFolder = "PrivateBABFT", IntroText = "Made by JM" })
 
+--Tabs
+
+GFarm = Window:MakeTab({
+	Name = "Gold Farm / Main",
+ 	Icon = "rbxassetid://3145118207",
+	PremiumOnly = false
+})
+
+local GCarm = Window:MakeTab({
+	Name = "Auto buy chest",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 -- Locals
 
 local players = game:GetService("Players")
@@ -217,20 +231,7 @@ function LChest2()
   end
 end
 
--- Tabs
 
-
-local GFarm = Window:MakeTab({
-	Name = "Gold Farm / Main",
- 	Icon = "rbxassetid://3145118207",
-	PremiumOnly = false
-})
-
-local GCarm = Window:MakeTab({
-	Name = "Auto buy chest",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 
 -- buttons
 
