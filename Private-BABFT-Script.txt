@@ -168,15 +168,12 @@ function RChest()
   end
 
 function RChest2()
-  while RChest2 == true do
-      local args = {
-      [1] = "Rare Chest",
-      [2] = 1
+  local args = {
+    [1] = "Rare Chest",
+    [2] = 1
   }
 
   workspace:WaitForChild("ItemBoughtFromShop"):InvokeServer(unpack(args))
-  task.wait()
-  end
 end
 
 function EChest()
