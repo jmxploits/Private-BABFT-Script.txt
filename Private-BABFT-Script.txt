@@ -20,7 +20,7 @@ local GCarm = Window:MakeTab({
 
 local players = game:GetService("Players")
 local stages = workspace:WaitForChild("BoatStages"):WaitForChild("NormalStages")
-local penguin, gold = workspace:WaitForChild("ChangeCharacter"), workspace:WaitForChild("ClaimRiverResultsGold")
+local gold = workspace:WaitForChild("ClaimRiverResultsGold")
 local client = players.LocalPlayer
 
 -- Values
@@ -56,7 +56,7 @@ function StartGFarm()
            gold:FireServer()
         end
  
-        penguin:FireServer("PenguinCharacter")
+        client.Character:Remove()
         client.Character.Humanoid.Health = 0
  
         repeat wait() 
