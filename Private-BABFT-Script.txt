@@ -56,11 +56,10 @@ function StartGFarm()
            gold:FireServer()
         end
  
-        client.Character:Remove()
         client.Character.Humanoid.Health = 0
  
         repeat wait() 
-        until client.Character and client.Character:FindFirstChild("HumanoidRootPart")
+        until client.Character.Humanoid.Health ~= 0
     
     end
 end
