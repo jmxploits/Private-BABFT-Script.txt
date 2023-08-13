@@ -57,7 +57,7 @@ function StartGFarm()
         end
  
         penguin:FireServer("PenguinCharacter")
-        client.Character.HumanoidRootPart:Remove()
+        client.Character.Humanoid.Health = 0
  
         repeat wait() 
         until client.Character and client.Character:FindFirstChild("HumanoidRootPart")
